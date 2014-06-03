@@ -17,7 +17,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method=RequestMethod.GET)
 	public String home() {
-		return "home";
+		return "redirect:resources/pages/index.html";
 	}
 	
 	@RequestMapping(value="questions", method=RequestMethod.GET, headers="Accept=application/json")
