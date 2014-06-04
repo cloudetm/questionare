@@ -4,8 +4,8 @@ import java.util.*;
 public class Question {
 	
 	private String question;
-	private Map<String, Boolean> options = new HashMap<String, Boolean>();
-	private String correctAnswer;
+	private Map<String, Boolean> choice = new HashMap<String, Boolean>();
+	private String answer;
 
 	public String getQuestion(){
 		return question;
@@ -15,18 +15,18 @@ public class Question {
 		this.question = question;
 	 }
 	
-	public void addOption(String opt, Boolean correct_answer){
-		options.put(opt, correct_answer);
+	public void addChoice(String opt, Boolean correct_answer){
+		choice.put(opt, correct_answer);
 		if (correct_answer)
-			this.correctAnswer = opt;
+			this.answer = opt;
 	}
 	
-	public String getCorrectAnswer(){
-		return this.correctAnswer;
+	public String getAnswer(){
+		return this.answer;
 	}
 	
-	public Set<String> getOptions(){
-		return options.keySet();
+	public Set<String> getChoice(){
+		return choice.keySet();
 	}
 	
 	@Override

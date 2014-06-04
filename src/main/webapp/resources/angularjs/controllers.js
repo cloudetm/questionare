@@ -5,7 +5,7 @@
 function QuestionsController($scope, $http, $routeParams, $location, $resultsService) {
 
   $scope.questionNo = $routeParams && $routeParams.questionNo ? $routeParams.questionNo : 1;
-  $http.get('../data/questions.json').success(function (questions){
+  $http.get('http://questionare.herokuapp.com/questions').success(function (questions){
     $scope.questions = questions;
   });
 
